@@ -1,33 +1,17 @@
 import React from "react";
 
-// const ReactImgSelect = props => {
-//   const { width, height, color, text } = props;
-//   return (
-//     <div
-//       style={{
-//         width: width || 100,
-//         height: height || 100,
-//         backgroundColor: color || "blue"
-//       }}
-//     >
-//       {text}
-//     </div>
-//   );
-// };
-
 const ReactImgSelect = props => {
   const {
     width,
     height,
     color,
-    text,
+    // text,
     imageArray,
     liWidth,
     liHeight,
     imgHeight,
     imgWidth
   } = props;
-  console.log("imageArray is " + JSON.stringify(imageArray));
   return (
     <ul
       style={{
