@@ -1,7 +1,7 @@
 import React from "react";
 
 const ReactImgSelect = props => {
-  const { width, height, items, text } = props;
+  const { width, height, items, color, text } = props;
   return (
     <div
       style={{
