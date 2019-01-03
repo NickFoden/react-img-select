@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "./Image";
 
 const ReactImgSelect = props => {
   const {
@@ -9,35 +10,61 @@ const ReactImgSelect = props => {
     imageArray,
     liWidth,
     liHeight,
+    liStyle,
     imgHeight,
-    imgWidth
+    imgStyle,
+    imgWidth,
+    onPress
   } = props;
   return (
     <ul
       style={{
+        display: `flex`,
+        flexDirection: `column`,
+        justifyContent: `spaceAround`,
+        height: height || 100,
         width: width || 100,
-        height: height || 100
+        alignContent: `spaceBetween`
         // backgroundColor: color || "blue"
       }}
     >
       {Array.isArray(imageArray)
-        ? imageArray.map(item => {
+        ? imageArray.map((item, idx) => {
             return (
               <li
-                style={{
-                  width: liWidth || 100,
-                  height: liHeight || 10,
-                  backgroundColor: color || "blue"
-                }}
+                key={idx}
+                style={
+                  liStyle
+                    ? liStyle
+                    : {
+                        backgroundColor: color || "blue",
+                        display: `flex`,
+                        flexDirection: `row`,
+                        width: liWidth || 100,
+                        height: liHeight || 10
+                      }
+                }
+                onClick={
+                  onPress
+                    ? (e, idx) => {
+                        onPress(e, idx);
+                      }
+                    : null
+                }
               >
-                <img
+                <Image
                   src={item.src}
-                  style={{
-                    width: imgWidth || 20,
-                    height: imgHeight || 20
-                  }}
+                  style={
+                    imgStyle
+                      ? imgStyle
+                      : {
+                          width: imgWidth || `100%`,
+                          height: imgHeight || `100%`,
+                          objectFit: `cover`
+                        }
+                  }
                 />
-                {item.caption ? item.caption : ""}
+                {/*{item.caption ? item.caption : ""}*/}
               </li>
             );
           })
