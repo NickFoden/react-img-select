@@ -22,7 +22,6 @@ $ npm install react-img-select
 import ReactImgSelect from "react-img-select";
 
 <ReactImgSelect
-  imgStyle={{}}
   onPress={e => this.handleSelect(e)}
   imageArray={[
     {
