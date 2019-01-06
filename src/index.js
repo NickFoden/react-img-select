@@ -47,7 +47,7 @@ const ReactImgSelect = props => {
         ? imageArray.map((item, idx) => {
             return (
               <li
-                key={idx}
+                key={item.key || idx}
                 style={
                   liStyle
                     ? { liStyle }
@@ -67,7 +67,7 @@ const ReactImgSelect = props => {
                 // onClick={(idx, item) => {
                 //   idx, item;
                 // }}
-                onClick={onPress ? e => onPress(e) : ""}
+                onClick={onPress ? e => onPress(e, item) : ""}
               >
                 {/* <div
                   style={

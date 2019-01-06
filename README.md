@@ -2,7 +2,7 @@
 
 ## Currently In Development Do not Use in Production !
 
-Still establishing the default props and will write out longer docs, estimating a basic prototype to be published and complete by 01/06/19, if you have feature requests can twitter @nickfoden
+Still establishing the default props and will write out longer docs, estimating a basic prototype to be published and complete by 01/08/19, if you have feature requests can twitter @nickfoden
 
 [![npm (scoped)](https://img.shields.io/npm/v/react-img-select.svg)](https://www.npmjs.com/package/react-img-select)
 
@@ -20,20 +20,54 @@ $ npm install react-img-select
 
 ```js
 import ReactImgSelect from "react-img-select";
+{...}
+ handleSelect = (e, item) => {
+    e.preventDefault();
+    console.log(item);
+  };
+
+{...}
 
 <ReactImgSelect
-  onPress={e => this.handleSelect(e)}
+  onPress={(e, item) => this.handleSelect(e, item)}
   imageArray={[
     {
       caption: "",
+      key: "",
       src: ""
     },
     {
       caption: "",
+      key: "",
       src: ""
     }
   ]}
 />;
 ```
 
-Default props are changing and prop names are subject to change as tinkering with best defaults is accomplished. Captions will be optional.
+Default props are changing and prop names are subject to change as tinkering with best defaults is accomplished. Captions and keys and onPress are optional. Thinking about alternatives/flexibility for src. Will write out behaviors and examples this week as firm up the props.
+
+Current Props List
+
+```js
+    color,
+    height,
+    imageArray,
+    liDirection,
+    liDisplay,
+    liHeight,
+    liPadding,
+    liStyle,
+    listStyle,
+    liWidth,
+    imgFlex,
+    imgHeight,
+    imgObjectFit,
+    imgStyle,
+    imgWidth,
+    onPress,
+    ulDirection,
+    ulDisplay,
+    ulStyle,
+    width,
+```
