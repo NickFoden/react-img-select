@@ -47,6 +47,10 @@ import ReactImgSelect from "react-img-select";
 
 Default props are changing and prop names are subject to change as tinkering with best defaults is accomplished. Captions and keys and onPress are optional. Thinking about alternatives/flexibility for src. Will write out behaviors and examples this week as firm up the props.
 
+Height and Width are for the container/ul
+
+liHeight and liWidth handle the item/li <--- start here
+
 Current Props List
 
 ```js
