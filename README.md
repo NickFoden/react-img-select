@@ -2,7 +2,7 @@
 
 ## Currently In Development Do not Use in Production !
 
-Still establishing the default props and will write out longer docs, estimating a basic prototype to be published and complete by 01/08/19, if you have feature requests can twitter @nickfoden
+Still establishing the default props and will write out longer docs, estimating a basic prototype to be published and complete by 01/20/19, if you have feature requests can twitter @nickfoden
 
 [![npm (scoped)](https://img.shields.io/npm/v/react-img-select.svg)](https://www.npmjs.com/package/react-img-select)
 
